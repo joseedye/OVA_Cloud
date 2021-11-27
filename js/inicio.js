@@ -24,30 +24,38 @@ function videootexto (ultima){
 
 
         case 11 : {
-            var video = '<p>prueba de texto</p>';
-                                       
-                seccion.innerHTML= video;
+            
+            document.getElementById('videomother').className += ' ocultar';                 
+               
                 break;
             }
 
         case 12 : {
-            var video = '<iframe width="840" height="400"\n' +
-                'src="https://www.youtube.com/embed/qedHi1tqNBg"\n' +
-                'title="YouTube video player"\n' +
-                'frameborder="0"\n' +
-                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
-                'allowfullscreen></iframe>';
-                                       
-                seccion.innerHTML= video;
+            document.getElementById('videomother').className += ' ocultar';       
+          
                 break; 
             }
            
        
 
         case 13 : {
-            
+            document.getElementById('videomother').classList.remove("ocultar");  
             var video = '<iframe width="840" height="400"\n' +
                 'src="https://www.youtube.com/embed/JhCZabY2lpk"\n' +
+                'title="YouTube video player"\n' +
+                'frameborder="0"\n' +
+                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
+                'allowfullscreen></iframe>';             
+
+                seccion.innerHTML= video;
+           
+            break;
+
+        }
+        case 14 : {
+            document.getElementById('videomother').classList.remove("ocultar");  
+            var video = '<iframe width="840" height="400"\n' +
+                'src="https://www.youtube.com/embed/qedHi1tqNBg"\n' +
                 'title="YouTube video player"\n' +
                 'frameborder="0"\n' +
                 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
