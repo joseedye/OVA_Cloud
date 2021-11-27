@@ -5,7 +5,7 @@ var seccion = document.getElementById("videoactividad");
 
 window.onload = function (){
 ultima(0);
-
+ocultar(1);
 
 }
 
@@ -71,7 +71,7 @@ function desactivar (activ){
 
 } 
 
-var contenido = [[],[12,13,14],[22,23,24]];
+var contenido = [[],[12,13,14,15,16,17,18,19],[22,23,24,25,26,27,28,29,291,292,293,294],[31,32,33,34,35,36,37,38,39]];
 
 function ocultar(id){
 var oculta = false;
@@ -80,8 +80,6 @@ var oculta = false;
     var elemento;
 
     for (let index = 0; index < contenido[id].length; index++) {   
-   console.log(id+'2');
-   console.log(oculta);
     elemento = document.getElementById(contenido[id][index]+''); 
     oculta===true ? elemento.classList.remove("ocultar") : elemento.className += ' ocultar';
     }   
