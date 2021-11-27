@@ -39,7 +39,7 @@ function videootexto (ultima){
                 'allowfullscreen></iframe>';
                                        
                 seccion.innerHTML= video;
-                break;
+                break; 
             }
            
        
