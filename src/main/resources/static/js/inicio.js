@@ -4,35 +4,60 @@ var seccion = document.getElementById("videoactividad");
 
 
 window.onload = function (){
-ultima(0);
+videootexto(11);
 ocultar(1);
+ocultar(2);
+ocultar(3);
+ocultar(4);
 
 }
 
-function ultima (ultima){
+
+
+function videootexto (ultima){
+
+
+
 
     switch (ultima){
 
-        case 0 : {
+
+
+        case 11 : {
+            var video = '<p>prueba de texto</p>';
+                                       
+                seccion.innerHTML= video;
+                break;
+            }
+
+        case 12 : {
             var video = '<iframe width="840" height="400"\n' +
                 'src="https://www.youtube.com/embed/qedHi1tqNBg"\n' +
                 'title="YouTube video player"\n' +
                 'frameborder="0"\n' +
                 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
                 'allowfullscreen></iframe>';
-
-            if( typeof  localStorage.token === undefined){
-                seccion.innerText= 'cree una cuenta para ver las actividades';
-            }else{
+                                       
                 seccion.innerHTML= video;
+                break;
             }
+           
+       
+
+        case 13 : {
+            
+            var video = '<iframe width="840" height="400"\n' +
+                'src="https://www.youtube.com/embed/JhCZabY2lpk"\n' +
+                'title="YouTube video player"\n' +
+                'frameborder="0"\n' +
+                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
+                'allowfullscreen></iframe>';             
+
+                seccion.innerHTML= video;
+           
             break;
+
         }
-
-        case 1 : alert('caso1');
-            break;
-
-
     }
 
 
@@ -59,6 +84,7 @@ function activar (id){
     var elemento = document.getElementById(id+'');
     elemento.classList.remove("curriculum-item-link--curriculum-item--KX9MD");
     elemento.className= "curriculum-item-link--curriculum-item--KX9MD curriculum-item-link--is-current--31BPo";
+videootexto(id);
     
     desactivar(id);
 }
@@ -71,7 +97,7 @@ function desactivar (activ){
 
 } 
 
-var contenido = [[],[12,13,14,15,16,17,18,19],[22,23,24,25,26,27,28,29,291,292,293,294],[31,32,33,34,35,36,37,38,39]];
+var contenido = [[],[12,13,14,15,16],[22,23,24,25,26,27,28,29,291,292],[32,33,34],[42,43,44,45]];
 
 function ocultar(id){
 var oculta = false;
@@ -81,8 +107,11 @@ var oculta = false;
 
     for (let index = 0; index < contenido[id].length; index++) {   
     elemento = document.getElementById(contenido[id][index]+''); 
-    oculta===true ? elemento.classList.remove("ocultar") : elemento.className += ' ocultar';
+    oculta===true ?   elemento.classList.remove("ocultar") : elemento.className += ' ocultar';
+   
+
     }   
+    oculta===false ?  document.getElementById('svg'+ id).classList.remove('rotar'):document.getElementById('svg'+ id).className = 'rotar';
 }
 
 
