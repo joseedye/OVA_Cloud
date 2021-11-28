@@ -16,7 +16,7 @@ async function entrar() {
     const respuesta = await request.text();   
 
 
-    
+
 
     if(respuesta!='no'){
         localStorage.token = respuesta;
@@ -25,5 +25,6 @@ async function entrar() {
     }else{
         alert('las credenciales son incorrectas');
     }
+
 
 }
