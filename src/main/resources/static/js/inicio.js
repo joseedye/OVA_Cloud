@@ -59,6 +59,7 @@ function videootexto(ultima) {
         }
         case 14: {
             document.getElementById('videomother').classList.remove("ocultar");
+
             onYouTubePlayerAPIReady();
            
             
@@ -78,6 +79,7 @@ function videootexto(ultima) {
             'allowfullscreen></iframe>';
 
         seccion.innerHTML = video;
+
             break;
 
         }
@@ -153,6 +155,7 @@ function ocultar(id) {
 }
 
 
+
 //
 var urlvideo =  "0Bmhjf0rKe8"
  
@@ -193,4 +196,5 @@ var urlvideo =  "0Bmhjf0rKe8"
     '</svg>';
 document.getElementById('visto'+id).innerHTML = visto;
   }
+
 
