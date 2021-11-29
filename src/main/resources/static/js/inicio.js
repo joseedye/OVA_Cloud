@@ -1,109 +1,82 @@
 
-
 var seccion = document.getElementById("videoactividad");
+var texto = document.getElementById('texto');
+var video = document.getElementById('videomother');
 
-
+//iniciar página
 window.onload = function () {
-    videootexto(11);
-   // ocultar(1);
+    cargarnombre();
     ocultar(2);
     ocultar(3);
     ocultar(4);
-
+    videootexto(12);
 }
 
-var titul = 'Acerca de este ova';
-var parrafo = ' <p>La computación en la nube cada vez toma más fuerza en casi todas las plataformas tecnológicas de la actualidad, en muchos sistemas de la información hacemos uso'+
-' de la computación en la nube y probablemente no nos hemos dado cuenta. Las grandes industrias están a la vanguardia de la computación en la nube, Amazon Web Service (AWS) Wittig, M., & Wittig, A. (2018). Amazon web services in'+
-'action. Simon and Schuster., Microsoft Azure, Oracle Cloud y Google Cloud, son un ejemplo de estas empresas que ofrecen servicios informáticos en la nube en todo el mundo. </p>';
-var descripcio = 'Descripción';
+//cargar nombre
+function cargarnombre (){
 
-
+    var nombre = localStorage.nombre;
+    var apellido = localStorage.apellido;
+    document.getElementById("nombres").innerText = nombre +" "+apellido;
+}
 
 function videootexto(ultima) {
 
-    var titulodom = document.getElementById('titulo').innerText = titul;
-    var parrafo1 = document.getElementById('parrafo1').innerHTML = parrafo;
-    var descripcion1 = document.getElementById('descripcion').innerText = descripcio;
-
-
     switch (ultima) {
 
+        case 12: {aparecevideo(); aparecetexto(); ponervideo("8jYM6BKYh5g",12); ponertexto(); break; }
 
+        case 13: {ocultartexto(); aparecevideo();  ponervideo("UY7u2tlf8cQ",13);  break;  }
 
-        case 11: {ocultarvideo();break;}
+        case 14: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",14); break; }
 
-        case 12: {
-            ocultarvideo();
-            aparecetexto();
-            break;
-        }
+        case 15: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",15); break;  }
 
+        case 16: {aparecevideo(); aparecetexto();  ponervideo("qedHisgfd1tqNBg",16); break;  }
 
+        case 22: {aparecevideo(); aparecetexto(); ponervideo("8jYM6BKYh5g",22); ponertexto(); break; }
 
-        case 13: {
-            ocultartexto(); 
-            aparecevideo();
+        case 23: {ocultartexto(); aparecevideo();  ponervideo("qedHi1tqNBg",23);  break;  }
 
-            var video = '<iframe width="840" height="400"\n' +
-                'src="https://www.youtube.com/embed/JhCZabY2lpk"\n' +
-                'title="YouTube video player"\n' +
-                'frameborder="0"\n' +
-                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
-                'allowfullscreen></iframe>';
+        case 24: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",24); break; }
 
-            seccion.innerHTML = video;
+        case 25: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",25); break;  }
 
-            break;
+        case 26: {aparecevideo(); aparecetexto();  ponervideo("qedHisgfd1tqNBg",26); break;  }
 
-        }
-        case 14: {
-            document.getElementById('videomother').classList.remove("ocultar");
+        case 27: {ocultartexto(); aparecevideo();  ponervideo("qedHi1tqNBg",27);  break;  }
 
-            onYouTubePlayerAPIReady();
-           
-            
-            break;
+        case 28: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",28); break; }
 
-        }
+        case 29: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",29); break;  }
 
-        case 15: {
-            document.getElementById('videomother').classList.remove("ocultar");
-            onYouTubePlayerAPIReady();
-           
-            var video = '<iframe width="840" height="400"\n' +
-            'src="https://www.youtube.com/embed/qedHi1tqNBg"\n' +
-            'title="YouTube video player"\n' +
-            'frameborder="0"\n' +
-            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
-            'allowfullscreen></iframe>';
+        case 291: {aparecevideo(); aparecetexto();  ponervideo("qedHisgfd1tqNBg",291); break;  }
 
-        seccion.innerHTML = video;
+        case 292: {aparecevideo(); aparecetexto();  ponervideo("qedHisgfd1tqNBg",292); break;  }
 
-            break;
-
-        }
     }
 
-
-
 }
-
 
 function ocultarvideo() {
-    document.getElementById('videomother').className += 'ocultar';
+    if (!video.classList.contains('ocultar')) {
+        video.className += 'ocultar';
+    }
 }
 function ocultartexto() {
-    document.getElementById('texto').className += 'ocultar';
-
+    if (!texto.classList.contains('ocultar')) {
+        texto.className += 'ocultar';
+        }
 }
 function aparecevideo() {
-    document.getElementById('videomother').classList.remove('ocultar');
-}
+    if (video.classList.contains('ocultar')) {
+        video.classList.remove('ocultar');
+    }  }
 function aparecetexto() {
-    document.getElementById('texto').classList.remove('ocultar');
+    if (texto.classList.contains('ocultar')) {
+        texto.classList.remove('ocultar');
+    }
 }
-
 
 function salir() {
     localStorage.token = undefined;
@@ -112,10 +85,7 @@ function salir() {
     window.location.href = '/';
 }
 
-
-
 //funcionalidades acordeon
-
 
 var activo = 12;
 function activar(id) {
@@ -125,7 +95,6 @@ function activar(id) {
     elemento.classList.remove("curriculum-item-link--curriculum-item--KX9MD");
     elemento.className = "curriculum-item-link--curriculum-item--KX9MD curriculum-item-link--is-current--31BPo";
     videootexto(id);
-
     desactivar(id);
 }
 
@@ -154,25 +123,37 @@ function ocultar(id) {
     oculta === false ? document.getElementById('svg' + id).classList.remove('rotar') : document.getElementById('svg' + id).className = 'rotar';
 }
 
+//poner texto
+function ponertexto(){
+    var titul = 'Acerca de este ova';
+    var parrafo = ' <p>La computación en la nube cada vez toma más fuerza en casi todas las plataformas tecnológicas de la actualidad, en muchos sistemas de la información hacemos uso'+
+        ' de la computación en la nube y probablemente no nos hemos dado cuenta. Las grandes industrias están a la vanguardia de la computación en la nube, Amazon Web Service (AWS) Wittig, M., & Wittig, A. (2018). Amazon web services in'+
+        'action. Simon and Schuster., Microsoft Azure, Oracle Cloud y Google Cloud, son un ejemplo de estas empresas que ofrecen servicios informáticos en la nube en todo el mundo. </p>';
+    var descripcio = 'Descripción';
+    var titulodom = document.getElementById('titulo').innerText = titul;
+    var parrafo1 = document.getElementById('parrafo1').innerHTML = parrafo;
+    var descripcion1 = document.getElementById('descripcion').innerText = descripcio;
 
+}
 
-//
-var urlvideo =  "0Bmhjf0rKe8"
- 
   // create youtube player
-  
-  function onYouTubePlayerAPIReady() {
-     
-    player = new YT.Player("videoactividad", {
-      width: "840",
-      height: "400",
-      videoId: "JhCZabY2lpk",
-      events: {
-       // onReady: onPlayerReady,
-        onStateChange: onPlayerStateChange,
-      },
-    });
+var videoreproducido = "";
+  function ponervideo(url,id)  {
+      player = null;
+      videoreproducido=id;
+document.getElementById("videoactividadexterno").innerHTML = '<div id="videoactividad"></div>';
+
+      player = new YT.Player("videoactividad", {
+          width: "840",
+          height: "400",
+          videoId: url,
+          events: {
+              // onReady: onPlayerReady,
+              onStateChange: onPlayerStateChange,
+          },
+      });
   }
+
 
   // autoplay video
   //function onPlayerReady(event) {
@@ -182,7 +163,7 @@ var urlvideo =  "0Bmhjf0rKe8"
   // when video ends
   function onPlayerStateChange(event) {
     if (event.data === 0) {
-        actividadvista(14);
+        actividadvista(videoreproducido);
     }
   }
 

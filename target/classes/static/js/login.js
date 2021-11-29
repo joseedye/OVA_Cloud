@@ -13,14 +13,17 @@ async function entrar() {
         },
         body: JSON.stringify(datos)
     });
-    const respuesta = await request.text();
+   const respuesta = await request.json();
 
 
 
     if(respuesta!='no'){
         localStorage.token = respuesta;
         localStorage.email = datos.email;
+        localStorage.nombre = respuesta.nombre;
+        localStorage.apellido = respuesta.apellido;
         window.location.href = 'inicio.html';
+
     }else{
         alert('las credenciales son incorrectas');
     }

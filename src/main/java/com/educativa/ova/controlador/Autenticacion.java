@@ -19,15 +19,16 @@ public class Autenticacion {
     JWTUtil jwtUtil;
 
     @RequestMapping(value = "api/login", method = RequestMethod.POST)
-    public String login(@RequestBody Usuario usuario) {
+    public Usuario login(@RequestBody Usuario usuario) {
 
         Usuario logeado = usuariodao.verificar(usuario);
         if(logeado!=null){
 
             String token =   jwtUtil.create(logeado.getId()+"",logeado.getEmail());
-            return token;
+            return logeado;
+            //return token;
         }else{
-            return "no";
+            return null;
         }
 
     }
