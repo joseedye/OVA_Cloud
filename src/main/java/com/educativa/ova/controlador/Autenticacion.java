@@ -28,7 +28,8 @@ public class Autenticacion {
             return logeado;
             //return token;
         }else{
-            return null;
+            usuario.setNombre("no");
+            return usuario;
         }
 
     }

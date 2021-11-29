@@ -17,7 +17,7 @@ async function entrar() {
 
 
 
-    if(respuesta!='no'){
+    if(respuesta.nombre!="no"){
         localStorage.token = respuesta;
         localStorage.email = datos.email;
         localStorage.nombre = respuesta.nombre;
@@ -25,7 +25,9 @@ async function entrar() {
         window.location.href = 'inicio.html';
 
     }else{
-        alert('las credenciales son incorrectas');
+var crecencialesinco = '<div style="color:#FF0000">credenciales o usuario incorrecto</div>';
+       document.getElementById("incorrecto").innerHTML = crecencialesinco;
+
     }
 
 }
