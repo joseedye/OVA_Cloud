@@ -20,10 +20,7 @@ public class UsuarioController {
 
     @RequestMapping(value = "/t")
     public List<Usuario> GetUsuarios() {
-
-
         return usuariodao.getUsuarios();
-
 
     }
 

@@ -15,7 +15,6 @@ window.onload = function () {
 
 //cargar nombre
 function cargarnombre (){
-
     var nombre = localStorage.nombre;
     var apellido = localStorage.apellido;
     document.getElementById("nombres").innerText = nombre +" "+apellido;

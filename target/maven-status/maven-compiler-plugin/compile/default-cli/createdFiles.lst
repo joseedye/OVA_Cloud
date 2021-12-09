@@ -1,0 +1,8 @@
+com\educativa\ova\controlador\UsuarioController.class
+com\educativa\ova\modelo\Usuario.class
+com\educativa\ova\util\JWTUtil.class
+com\educativa\ova\dao\UsuarioDaoImplement.class
+com\educativa\ova\controlador\Autenticacion.class
+com\educativa\ova\OvaApplication.class
+com\educativa\ova\ServletInitializer.class
+com\educativa\ova\dao\UsuarioDao.class
