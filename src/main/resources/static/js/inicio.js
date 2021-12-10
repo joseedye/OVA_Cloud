@@ -4,15 +4,6 @@ var texto = document.getElementById('texto');
 var video = document.getElementById('videomother');
 var idimg ="35";
 
-//iniciar página
-window.onload = function () {
-    cargarnombre();
-    ocultar(2);
-    ocultar(3);
-    ocultar(4);
-    videootexto(12);
-}
-
 //cargar nombre
 function cargarnombre (){
     var nombre = localStorage.nombre;
@@ -216,6 +207,7 @@ document.getElementById("videoactividadexterno").innerHTML = '<div id="videoacti
   function onPlayerStateChange(event) {
     if (event.data === 0) {
         actividadvista(videoreproducido);
+        guardaractividadvista(videoreproducido);
     }
   }
 
@@ -230,4 +222,17 @@ document.getElementById("videoactividadexterno").innerHTML = '<div id="videoacti
 document.getElementById('visto'+id).innerHTML = visto;
   }
 
+
+
+async function guardaractividadvista (iddeactividad){
+
+    const request = await fetch('gvisto/'+iddeactividad, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    });
+
+}
 

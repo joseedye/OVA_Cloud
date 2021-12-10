@@ -21,4 +21,11 @@ public class RecursosDaoImplements  implements RecursosDao{
 
         return entityManager.createQuery(query).getResultList();
     }
+
+    @Override
+    public String guardarvisto(Long id) {
+        Recursos r = entityManager.find(Recursos.class, id);
+        r.setVisto("1");
+        return r.toString();
+    }
 }

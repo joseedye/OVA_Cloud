@@ -20,5 +20,11 @@ public class RecursoController {
         return recursosdao.getRecursos();
     }
 
+    @RequestMapping(value = "/gvisto/{id}")
+    public String guardarvisto( @PathVariable Long id){
+               return recursosdao.guardarvisto(id);
+    }
+
+
 
 }
