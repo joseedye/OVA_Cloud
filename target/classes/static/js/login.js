@@ -22,6 +22,7 @@ async function entrar() {
         localStorage.email = datos.email;
         localStorage.nombre = respuesta.nombre;
         localStorage.apellido = respuesta.apellido;
+        localStorage.id = respuesta.id;
         window.location.href = 'inicio.html';
 
     }else{

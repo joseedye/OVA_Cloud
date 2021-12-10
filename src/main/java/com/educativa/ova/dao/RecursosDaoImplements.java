@@ -25,7 +25,6 @@ public class RecursosDaoImplements  implements RecursosDao{
     @Override
     public String guardarvisto(Long id) {
         Recursos r = entityManager.find(Recursos.class, id);
-        r.setVisto("1");
         return r.toString();
     }
 }

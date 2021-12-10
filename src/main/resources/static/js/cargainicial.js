@@ -11,7 +11,7 @@ cargainicial();
 
 async function cargainicial (){
 
-    const request = await fetch('/r', {
+    const request = await fetch('/ru/'+ localStorage.id, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -21,9 +21,11 @@ async function cargainicial (){
      const respuesta = await request.json();
 
 for(let i = 0; i < respuesta.length; i++) {
-    if(respuesta[i].visto === "1"){
-    actividadvista(respuesta[i].id);
-    }
+
+    if(respuesta[i].vista === 1){
+         actividadvista(respuesta[i].idrecurso);
+
+        }
 
 }
 

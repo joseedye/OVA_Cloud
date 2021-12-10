@@ -1,4 +1,8 @@
 com\educativa\ova\dao\RecursosDao.class
+com\educativa\ova\dao\RecursoUsuarioDao.class
 com\educativa\ova\modelo\Recursos.class
+com\educativa\ova\modelo\RecursoUsuario.class
+com\educativa\ova\controlador\RecursoUsuarioController.class
 com\educativa\ova\dao\RecursosDaoImplements.class
+com\educativa\ova\dao\RecursoUsuarioDaoImplements.class
 com\educativa\ova\controlador\RecursoController.class

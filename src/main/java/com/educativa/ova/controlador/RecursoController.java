@@ -16,14 +16,13 @@ public class RecursoController {
 
     @RequestMapping(value = "/r")
     public List<Recursos> GetRecursos() {
-
         return recursosdao.getRecursos();
     }
 
-    @RequestMapping(value = "/gvisto/{id}")
-    public String guardarvisto( @PathVariable Long id){
-               return recursosdao.guardarvisto(id);
-    }
+    //@RequestMapping(value = "/gvisto/{id}")
+    //public String guardarvisto( @PathVariable Long id){
+    //           return recursosdao.guardarvisto(id);
+    //}
 
 
 

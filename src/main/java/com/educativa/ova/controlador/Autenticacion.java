@@ -24,7 +24,7 @@ public class Autenticacion {
         Usuario logeado = usuariodao.verificar(usuario);
         if(logeado!=null){
 
-            String token =   jwtUtil.create(logeado.getId()+"",logeado.getEmail());
+           // String token =   jwtUtil.create(logeado.getId()+"",logeado.getEmail());
             return logeado;
             //return token;
         }else{

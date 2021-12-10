@@ -20,14 +20,8 @@ public class Recursos {
     @Column(name ="id_recurso")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @Getter @Setter @Column(name ="url")
     private String url;
-
-    @Getter @Setter @Column(name ="visto")
-    private String visto;
-
-    @Getter @Setter @Column(name ="calificacion")
-    private String calificacion;
-
 
 }

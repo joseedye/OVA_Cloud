@@ -223,10 +223,9 @@ document.getElementById('visto'+id).innerHTML = visto;
   }
 
 
-
 async function guardaractividadvista (iddeactividad){
 
-    const request = await fetch('gvisto/'+iddeactividad, {
+    const request = await fetch('ruv/'+localStorage.id+'/'+iddeactividad, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

@@ -44,6 +44,7 @@ public class UsuarioController {
 
     @RequestMapping(value = "api/usuarios", method = RequestMethod.POST)
     public void CrearUsuario(@RequestBody Usuario usuario) {
+
         usuariodao.crear(usuario);
     }
 
