@@ -23,9 +23,7 @@ public class Usuario {
     private String apellido;
     @Getter @Setter @Column(name ="email")
     private String email;
-    @Getter @Setter @Column(name ="telefono")
-    private String telefono;
-    @Getter @Setter @Column(name ="password")
+     @Getter @Setter @Column(name ="password")
     private String pasword;
 
 
