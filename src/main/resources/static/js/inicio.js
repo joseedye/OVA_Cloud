@@ -12,51 +12,56 @@ function cargarnombre (){
 }
 
 function videootexto(ultima) {
-    if (!document.getElementById('imagenes' + idimg).classList.contains('ocultar')) {  borrarimg(); }
+   // if (!document.getElementById('imagenes' + idimg).classList.contains('ocultar')) {  borrarimg(); }
 
    
     switch (ultima) {
 
-       
-
-        case 12: {aparecevideo(); aparecetexto(); ponervideo("8jYM6BKYh5g",12); ponertexto(ultima); break; }
-
-        case 13: {aparecetexto(); aparecevideo();  ponervideo("UY7u2tlf8cQ",13); ponertexto(ultima); break;  }
-
-        case 14: {aparecevideo(); aparecetexto();  ponervideo("ebNbF3rP7Oo",14); ponertexto(ultima);break; }
-
-        case 15: {aparecevideo(); ocultartexto();  ponervideo("HtwAPdU0RT0",15); break;  }
-
-        case 16: {aparecevideo(); ocultartexto();  ponervideo("ZwDaipDCqHk",16); break;  }
-
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16: {aparecevideo();  aparecetexto();   url(ultima); ponertexto(ultima); ocultarsopa(); break;  }
         case 17: {ocultartexto(); ocultarvideo();  ponersopa(ultima,"sopa1.htm"); break;  }
 
-        case 22: {aparecevideo(); aparecetexto(); ponervideo("8jYM6BKYh5g",22); ponertexto(); break; }
 
-        case 23: {ocultartexto(); aparecevideo();  ponervideo("qedHi1tqNBg",23);  break;  }
+        case 22:  {aparecevideo(); aparecetexto();  url(ultima); ponertexto(ultima); ocultarsopa(); break; }
+        case 23:
+        case 24:
+        case 25:
+        case 26:
+        case 27:
+        case 28:
+        case 29:
+        case 291:
+        case 292: {aparecevideo(); aparecetexto();  url(ultima); ponertexto(ultima); ocultarsopa();  break;  }
 
-        case 24: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",24); break; }
 
-        case 25: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",25); break;  }
 
-        case 26: {aparecevideo(); aparecetexto();  ponervideo("qedHisgfd1tqNBg",26); break;  }
+        case 32:
+        case 33:
+        case 34:
 
-        case 27: {ocultartexto(); aparecevideo();  ponervideo("qedHi1tqNBg",27);  break;  }
-
-        case 28: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",28); break; }
-
-        case 29: {aparecevideo(); ocultartexto();  ponervideo("qedHisgfd1tqNBg",29); break;  }
-
-        case 291: {aparecevideo(); aparecetexto();  ponervideo("qedHisgfd1tqNBg",291); break;  }
-
-        case 292: {aparecevideo(); aparecetexto();  ponervideo("qedHisgfd1tqNBg",292); break;  }
-
-        case 32: {aparecevideo(); ponertexto(32);  ponervideo("8jYM6BKYh5g",32); break; }
-        case 33: {aparecevideo(); ponertexto(33);  ponervideo("8jYM6BKYh5g",33); break; } 
-        case 34: {aparecevideo(); ponertexto(34);  ponervideo("lCR7rA3BMLI",34); break; }
+        case 42:
+        case 43:
+        case 44:
+        case 45: {aparecevideo(); aparecetexto();  url(ultima); ponertexto(ultima); ocultarsopa(); break; }
 
     }
 
+}
+
+async function url(id){
+ const request = await fetch('/respecial/'+id, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    });
+
+ const respuesta = await request.text();
+ ponervideo(respuesta,id);
 }
 
 function borrarimg(){
@@ -129,59 +134,42 @@ function ocultar(id) {
 }
 
 //poner texto
-function ponertexto(id){    
-    
-    var titul = 'Acerca de este ova';
-    var parrafo = ' <p>La computación en la nube cada vez toma más fuerza en casi todas las plataformas tecnológicas de la actualidad, en muchos sistemas de la información hacemos uso'+
-        ' de la computación en la nube y probablemente no nos hemos dado cuenta. Las grandes industrias están a la vanguardia de la computación en la nube, Amazon Web Service (AWS) Wittig, M., & Wittig, A. (2018). Amazon web services in'+
-        'action. Simon and Schuster., Microsoft Azure, Oracle Cloud y Google Cloud, son un ejemplo de estas empresas que ofrecen servicios informáticos en la nube en todo el mundo. </p>';
-    var descripcio = 'Descripción';
+ async function ponertexto(id){
 
-var parrafo1 = '<br><p>Hoy en día la tecnología, inmersa en la red de redes; el internet. Está involucrando cada vez más las actividades humanas; vivimos en una era de transformación digital de forma acelerada, y cada vez es un reto para los expertos poder controlar todo lo que esta sucediendo.'+
-'La informática no es la misma de hace 30 años, y la computación en la nube ha marcado una diferencia radical, que hasta ahora se ha posicionado fuertemente y sigue creciendo  a una velocidad exponencial.'+
-'</p><br><p>Definición de computación en la nube'+
-'</p><br><p>Significa almacenar y acceder a datos y programas a través de Internet de forma remota en lugar del disco duro local.</p>';
+ const request = await fetch('/respecialt/'+id, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    });
 
-parrafo1+= '<br><div class="udlite-heading-xl">Definición por parte de NIST</div>';
-parrafo1+= '<br><p>Modelo que permite el acceso a la red a pedido, conveniente y ubicuo a un grupo compartido de recursos de computación configurables (por ejemplo, redes , servidores, almacenamiento, aplicaciones y servicios) que se pueden aprovisionar y liberar rápidamente con un mínimo esfuerzo de gestión o interacción del proveedor de servicios.</p>';
-   // var titulodom = document.getElementById('titulo').innerText = titul;
-    //var parrafo1 = document.getElementById('parrafo1').innerHTML = parrafo;
-    //var descripcion1 = document.getElementById('descripcion').innerText = descripcio;
+ const respuesta = await request.text();
 
-    if(id==12){
-        document.getElementById('titulo').innerText = titul;
-        document.getElementById('parrafo1').innerHTML = parrafo;
-    }
-
-if(id==13){
-
-    document.getElementById('parrafo1').innerHTML = parrafo1;
-}
-
-if(id==14){
-    document.getElementById('titulo').innerHTML = '<br><br><div class="udlite-heading-xl">Caracteristicas</div>';
- document.getElementById('parrafo1').innerHTML = '<img src="./img/caracteristicas.png">';
-}
-
-    if (id>=32&&id<=34){
-       // document.getElementById('imagenesimport').innerHTML = hibrida;
-       document.getElementById('imagenes'+id).classList.remove('ocultar');
-       idimg=id;
-    }
-
+   document.getElementById('textos').innerHTML = respuesta;
 
 }
 
 //poner sopa
 function ponersopa(id,url){
-document.getElementById('sopas').classList.remove('ocultar');
+var sopp = document.getElementById('sopas');
+if (sopp.classList.contains('ocultar')) {
+        sopp.classList.remove('ocultar');
+    }
 idimg=id;
 }
 
+function ocultarsopa(){
+var sopp = document.getElementById('sopas');
+if (!sopp.classList.contains('ocultar')) {
+        sopp.className += 'ocultar';
+        }
+}
 
   // create youtube player
 var videoreproducido = "";
   function ponervideo(url,id)  {
+
       player = null;
       videoreproducido=id;
 document.getElementById("videoactividadexterno").innerHTML = '<div id="videoactividad"></div>';

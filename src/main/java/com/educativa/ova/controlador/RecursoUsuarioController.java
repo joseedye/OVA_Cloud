@@ -15,11 +15,13 @@ public class RecursoUsuarioController {
     @Autowired
     private RecursoUsuarioDao recursousuario;
 
+    //consulta un rescurso en especial a un usuario
     @RequestMapping(value = "/ru/{iduser}/{idrecurso}")
     public List<RecursoUsuario> GetRecursos(@PathVariable Long iduser,@PathVariable Long idrecurso) {
-        return recursousuario.getRecursosUsuario( iduser, idrecurso);
+        return recursousuario.getRecursosUsuario(iduser, idrecurso);
     }
 
+    //busca los recursos de un usuario
     @RequestMapping(value = "/ru/{iduser}")
     public List<RecursoUsuario> GetRecursos(@PathVariable Long iduser) {
         return recursousuario.getRecursosUsuario( iduser);
@@ -30,6 +32,9 @@ public class RecursoUsuarioController {
     public String guardarvisto(@PathVariable Long iduser,@PathVariable Long idrecurso){
         return recursousuario.guardarvisto( iduser, idrecurso);
     }
+
+
+
 
 
 

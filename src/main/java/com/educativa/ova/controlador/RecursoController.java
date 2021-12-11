@@ -14,16 +14,22 @@ public class RecursoController {
     @Autowired
     private RecursosDao recursosdao;
 
+    //devuelve la lista de recursos
     @RequestMapping(value = "/r")
     public List<Recursos> GetRecursos() {
         return recursosdao.getRecursos();
     }
 
-    //@RequestMapping(value = "/gvisto/{id}")
-    //public String guardarvisto( @PathVariable Long id){
-    //           return recursosdao.guardarvisto(id);
-    //}
+    //devuelve la url de un recurso en especial
+    @RequestMapping(value = "/respecial/{idrec}")
+    public String geturl( @PathVariable Long idrec){
+        return recursosdao.getUrl(idrec);
+    }
 
-
+    //devuelve el texto de un recurso en especial
+    @RequestMapping(value = "/respecialt/{idrec}")
+    public String getText( @PathVariable Long idrec){
+        return recursosdao.getText(idrec);
+    }
 
 }

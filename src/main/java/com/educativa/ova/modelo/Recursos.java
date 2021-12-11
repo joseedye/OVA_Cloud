@@ -24,4 +24,6 @@ public class Recursos {
     @Getter @Setter @Column(name ="url")
     private String url;
 
+    @Getter @Setter @Column(name ="texto")
+    private String text;
 }

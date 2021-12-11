@@ -9,6 +9,8 @@ public interface RecursosDao {
 
     List<Recursos> getRecursos();
 
-    String guardarvisto(Long id);
+    String getUrl(Long id);
+
+    String getText(Long id);
 
 }
