@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--Created by Ardora - www.webardora.net-->
+<!--ArdoraCW-->
+<!--bajo licencia Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+para otros usos contacte con el autor-->
+<html lang="es">
+<head><meta charset="utf-8" /><title>Nubes Hibridas</title>
+<link type="text/css" href="nube_Hibrida_resources/css/ardoraCW.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="nube_Hibrida_resources/js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="nube_Hibrida_resources/js/jquery-ui.min.js"></script>
+<script language="javascript" type="text/javascript" src="nube_Hibrida_resources/js/jquery.ui.touch-punch.min.js"></script>
+<script language="javascript" type="text/javascript" src="nube_Hibrida_resources/js/ardoraCWCFG.js"></script>
+<script language="javascript" type="text/javascript" src="nube_Hibrida_resources/js/ardoraScorm.js"></script>
+<script language="javascript" type="text/javascript" src="nube_Hibrida_resources/js/ardoraCW.js"></script>
+<script language="javascript" type="text/javascript" src="nube_Hibrida_resources/js/ardoraTab.js"></script>
+</head>
+<body onLoad="loadPage()" onbeforeunload="unloadPage()" onUnload="unloadPage()">
+<div id="ardoraMain">
+<div id="ardoraEnu"><SPAN style="font-size:12px;color:#000000">Realizar el siguiente crucigrama, con los terminos aprendidos en la unidad</SPAN></div>
+  <div id="ardoraAct">
+  <table id="tableGame">
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_0" name="C4_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_0" name="C5_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_0" name="C6_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_0" name="C7_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_0" name="C8_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_0" name="C9_0" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_0" name="C10_0" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_1" name="C4_1" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C10_1" name="C10_1" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="activeCell"><input id="C0_2" name="C0_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C1_2" name="C1_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_2" name="C2_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_2" name="C3_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_2" name="C4_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_2" name="C5_2" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_2" name="C6_2" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C10_2" name="C10_2" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_2" name="C12_2" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_2" name="C14_2" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_3" name="C4_3" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_3" name="C12_3" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_3" name="C14_3" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C1_4" name="C1_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C2_4" name="C2_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C3_4" name="C3_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C4_4" name="C4_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_4" name="C5_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_4" name="C6_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_4" name="C7_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_4" name="C8_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_4" name="C9_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_4" name="C10_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C11_4" name="C11_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C12_4" name="C12_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C13_4" name="C13_4" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C14_4" name="C14_4" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_5" name="C4_5" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_5" name="C8_5" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_5" name="C12_5" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_5" name="C14_5" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_6" name="C4_6" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_6" name="C8_6" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_6" name="C12_6" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_6" name="C14_6" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C6_7" name="C6_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_7" name="C7_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_7" name="C8_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_7" name="C9_7" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_7" name="C10_7" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_7" name="C12_7" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_7" name="C14_7" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_8" name="C8_8" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_8" name="C12_8" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_8" name="C14_8" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_9" name="C8_9" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_9" name="C12_9" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_9" name="C14_9" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_10" name="C8_10" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_10" name="C12_10" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C14_10" name="C14_10" type="text" class="cell" maxlength="1"/></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_11" name="C8_11" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C12_11" name="C12_11" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_12" name="C8_12" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C4_13" name="C4_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C5_13" name="C5_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C6_13" name="C6_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C7_13" name="C7_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C8_13" name="C8_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C9_13" name="C9_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C10_13" name="C10_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C11_13" name="C11_13" type="text" class="cell" maxlength="1"/></td>
+<td class="activeCell"><input id="C12_13" name="C12_13" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+<tr>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="activeCell"><input id="C8_14" name="C8_14" type="text" class="cell" maxlength="1"/></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+<td class="hidetd"></td>
+</tr>
+</table>
+<canvas id="ardoraActCanvas" width="2px" height="2px"></canvas>
+<div id="buttonDir"><canvas id="ardoraButtonDirCanvas" width="40px" height="40px"></canvas></div>
+<div id="defIma"></div>
+  </div>
+<div id="ardoraTab">
+  <canvas id="ardoraTabCanvas" width="70" height="98"></canvas>
+  <div id="buttonOk"><canvas id="buttonOkCanvas" width="70" height="70"></canvas></div>
+</div></div>
+<div id="ardoraAlumSCORM"><p></p></div>
+</body></html>

@@ -1,10 +1,11 @@
+
 window.onload = function () {
  cargarnombre();
     ocultar(2);
     ocultar(3);
     ocultar(4);
     videootexto(12);
-cargainicial();
+    cargainicial();
 }
 
 

@@ -22,7 +22,7 @@ function videootexto(ultima) {
         case 14:
         case 15:
         case 16: {aparecevideo();  aparecetexto();   url(ultima); ponertexto(ultima); ocultarsopa(); break;  }
-        case 17: {ocultartexto(); ocultarvideo();  ponersopa(ultima,"sopa1.htm"); break;  }
+        case 17: {ocultartexto(); ocultarvideo();  ponersopa(ultima); break;  }
 
 
         case 22:  {aparecevideo(); aparecetexto();  url(ultima); ponertexto(ultima); ocultarsopa(); break; }
@@ -31,10 +31,12 @@ function videootexto(ultima) {
         case 25:
         case 26:
         case 27:
-        case 28:
+        case 28:{aparecevideo(); aparecetexto();  url(ultima); ponertexto(ultima); ocultarsopa();  break;  }
+        case 281: {ocultartexto(); ocultarvideo();  ponersopa(ultima); break;  }
         case 29:
         case 291:
         case 292: {aparecevideo(); aparecetexto();  url(ultima); ponertexto(ultima); ocultarsopa();  break;  }
+        case 293: {ocultartexto(); ocultarvideo();  ponersopa(ultima); break;  }
 
 
 
@@ -116,7 +118,7 @@ function desactivar(activ) {
 
 }
 
-var contenido = [[], [12, 13, 14, 15, 16,17], [22, 23, 24, 25, 26, 27, 28, 29, 291, 292], [32, 33, 34], [42, 43, 44, 45]];
+var contenido = [[], [12, 13, 14, 15, 16,17], [22, 23, 24, 25, 26, 27, 28, 281, 29, 291, 292, 293], [32, 33, 34], [42, 43, 44, 45]];
 
 function ocultar(id) {
     var oculta = false;
@@ -151,8 +153,21 @@ function ocultar(id) {
 }
 
 //poner sopa
-function ponersopa(id,url){
+async function ponersopa(id){
+
+ const request = await fetch('/respecialt/'+id, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    });
+
+ const respuesta = await request.text();
+
 var sopp = document.getElementById('sopas');
+var ifrem =  '<iframe src="'+respuesta+'" width="840" height="720"></iframe>' ;
+sopp.innerHTML = ifrem;
 if (sopp.classList.contains('ocultar')) {
         sopp.classList.remove('ocultar');
     }
